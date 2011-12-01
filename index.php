@@ -4,7 +4,7 @@ if(!file_exists('conf.php')){
     echo "<b>Run ./install.sh</b>";
     return;
 }else{
-    require_once('we_conf.php');
+    require_once('conf.php');
 }
 
 // Require everything!!!!
