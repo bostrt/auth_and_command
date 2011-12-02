@@ -7,7 +7,6 @@
  *
  * @author Robert Bost <bostrt at appstate dot edu>
  */
-
 require_once("Model.php");
 
 class User extends Model
@@ -22,24 +21,6 @@ class User extends Model
 
     public function getTable(){
         return 'user';
-    }
-
-    /**
-     * Get all code files related to this user.
-     *
-     * @return CodeFile[]
-     */
-    public function getCodeFiles()
-    {
-        require_once('Database.php');
-        require_once('CodeFile.php');
-        
-        $db = Database::getDb();
-
-        $sth = $db->prepare('SELECT * FROM file WHERE ownerId = :ownerId');
-        $sth->execute(array(':ownerId' => $this->id));
-        
-        return $sth->fetchAll(PDO::FETCH_CLASS, 'CodeFile');
     }
 
     /**

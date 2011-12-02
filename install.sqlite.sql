@@ -8,9 +8,9 @@ CREATE TABLE user (
        added INT NOT NULL,
        updated INT NOT NULL,
        lastLogin INT NOT NULL,
-       admin INT NOT NULL,
+       admin INT NOT NULL
 );
 
 -- Insert some admins and sections
 -- password 123456
-INSERT INTO user VALUES (3, 'admin3', 'Admin', 'Istrator', 'bostrt@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 0, 0, 0, 1, 2);
+INSERT INTO user VALUES (3, 'admin3', 'Admin', 'Istrator', 'bostrt@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 0, 0, 0, 0);
